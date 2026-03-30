@@ -3,6 +3,7 @@
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/a0d65820-d121-41b2-9f69-e904063265bd" />
 
 
+
 In this game, you are required to guess a word that directly relates to the current technological landscape, for as many consecutive rounds as possible. The game may look simple, but watch out - there may be dangerous traps you need to avoid when guessing a word - one wrong move, and the hangman is stuck at stake! 
 
 **Prerequisites**
