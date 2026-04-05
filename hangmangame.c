@@ -104,6 +104,11 @@ int main() {
         "react",
         "mandatory access control",
         "packet filter",
+        "virtual private network",
+        "domain name system",
+        "dataset",
+        "version control",
+        "transport layer security",
     };
     int totalword=sizeof(wordlist)/sizeof(wordlist[0]);
     srand(time(NULL));
