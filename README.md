@@ -29,6 +29,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 
 **Installation**
+
 There are three methods to install the game: .exe file (on Windows), .deb file (Debian-based distros), .flatpak file (all Linux distros):
 
 For the first two methods (.exe and .deb), all you need is to extract the file and seamlessly play the game.
