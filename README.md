@@ -8,28 +8,42 @@ In this game, you are required to guess a word that directly relates to the curr
 
 **Prerequisites**
 
-To play the game, you should have gcc installed on your computer (available on both MacOS, Linux and Windows), since an official .exe/.dmg/.deb/.rpm file is not yet published (although future GUI versions with executable files will be released)
+No prerequisites required (except non-Debian distros, in which Flatpak is needed). If you want to download and play this game via Flatpak, please ensure to have Flatpak and the Flathub repo installed for maximmum compatibility.
+
+For Fedora-based distros:
+```
+sudo yum install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+For Arch-based distros:
+```
+sudo pacman -Syu
+sudo pacman -S flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+For Gentoo-based distros:
+```
+emerge --ask --verbose sys-apps/flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
 
 **Installation**
-1. To install the game, you should download the hangmangame.c file on your computer, then use your OS' terminal to head towards the folder/directory.
+There are three methods to install the game: .exe file (on Windows), .deb file (Debian-based distros), .flatpak file (all Linux distros):
 
-For Windows (depending on your hard drive name, whether it's C:, D:, ...): 
+For the first two methods (.exe and .deb), all you need is to extract the file and seamlessly play the game.
+
+In case for flatpak, you need to download the .flatpak file first, then extract the game using the following commands:
+
 ```
-cd C:\path\to\your\folder
+flatpak install --user hangmangame.flatpak
 ```
-For MacOS/Linux/ChromeOS:
+Then you can finally run the game:
 ```
-cd /path/to/your/folder
+flatpak run io.github.xfst14.Hangman
 ```
 
-2. Compile the .c file via gcc:
-```
-gcc hangmangame.c -o your_file_name
-```
-3. Launch the game:
-```
-./your_file_name
-```
+
 **Game instructions**
 
 There is a certain number of rounds in this game that you are required to overcome. 
