@@ -73,3 +73,22 @@ jobs:
       # Execute tests defined by the CMake configuration. Note that --build-config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ctest --build-config ${{ matrix.build_type }}
+    steps:
+    - uses: actions/checkout@v4
+
+    # NEW: Install SDL2 dependencies
+    - name: Install SDL2 Dependencies (Linux)
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libsdl2-dev libsdl2-ttf-dev libsdl2-mixer-dev libsdl2-image-dev
+
+    - name: Install SDL2 Dependencies (Windows)
+      if: runner.os == 'Windows'
+      shell: pwsh
+      run: |
+        # Windows needs vcpkg or MSYS2 - simpler: use chocolatey
+        choco install sdl2 sdl2_ttf sdl2_mixer sdl2_image -y
+
+    - name: Set reusable strings
+      # ... rest unchanged
