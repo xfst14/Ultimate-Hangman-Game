@@ -109,6 +109,10 @@ int main() {
         "dataset",
         "version control",
         "transport layer security",
+        "secure shell",
+        "postgresql",
+        "mysql",
+        
     };
     int totalword=sizeof(wordlist)/sizeof(wordlist[0]);
     srand(time(NULL));
