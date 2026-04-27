@@ -117,7 +117,7 @@ int main() {
     int totalword=sizeof(wordlist)/sizeof(wordlist[0]);
     srand(time(NULL));
 
-    int totalround=3;
+    int totalround=4;
     int currentscore=0;
     printf("===============================\n");
     printf("Welcome to the Ultimate Technology Hangman Challenge!\n In this game, you have to win three rounds to become the champion! \n Failing to win a round will result in losing the game.\n");
